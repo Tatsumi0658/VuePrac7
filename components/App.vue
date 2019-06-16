@@ -5,6 +5,10 @@
       <li v-for="task in tasks" v-bind:key="task.id">
         <input type="checkbox" v-bind:checked="task.done" />
         {{ task.name }}
+        -
+        <span v-for="id in text.labelIds" v-bind:key="id">
+          {{ getLabelText(id) }}
+        </span>
         </li>
       </ul>
   </div>
